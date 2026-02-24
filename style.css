@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #1a1a1a, #000);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+#countdown {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+
+#timer {
+    font-size: 80px;
+    margin-top: 20px;
+    color: #ff0055;
+}
+
+.main {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+}
+
+.neon {
+    font-size: 60px;
+    color: #fff;
+    text-shadow:
+        0 0 5px #ff0055,
+        0 0 10px #ff0055,
+        0 0 20px #ff4da6,
+        0 0 40px #ff4da6;
+}
+
+.subtitle {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 15px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff0055;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff3380;
+    transform: scale(1.1);
+}
+
+.message {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.lyrics {
+    font-size: 22px;
+    color: #ff4da6;
+    animation: floatText 4s infinite alternate;
+}
+
+@keyframes floatText {
+    from { transform: translateY(0); }
+    to { transform: translateY(15px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.heart {
+    position: absolute;
+    color: #ff4da6;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
